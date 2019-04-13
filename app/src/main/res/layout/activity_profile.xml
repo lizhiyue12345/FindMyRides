@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/EditPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!-- Edit Item for EditText -->
+
+
+        <ImageView
+            android:id="@+id/editProfileIcon"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/editProfileName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editProfileName"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="sans-serif-light"
+            android:hint="New ID"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/editProfileEma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfileIcon" />
+
+
+        <EditText
+            android:id="@+id/editProfileEma"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="sans-serif-light"
+            android:hint="New Email"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/editPhoNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfileName" />
+
+        <EditText
+            android:id="@+id/editPhoNum"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/et_bg"
+            android:digits="0123456789"
+            android:fontFamily="sans-serif-light"
+            android:hint="New phone Number"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/confirmEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfileEma" />
+
+
+        <!-- End here-->
+
+        <!-- Edit item for Button -->
+        <Button
+            android:id="@+id/confirmEdit"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="96dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="sans-serif-light"
+            android:text="Confirm"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cancelEdit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPhoNum" />
+
+        <Button
+            android:id="@+id/cancelEdit"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="sans-serif-light"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/confirmEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/confirmEdit" />
+        <!-- End here -->
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ViewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/profileName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/profileEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
+
+
+        <TextView
+            android:id="@+id/profileEmail"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/profilePhoNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileName" />
+
+        <TextView
+            android:id="@+id/profilePhoNum"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/proEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileEmail" />
+
+        <Button
+            android:id="@+id/proBack"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="sans-serif-light"
+            android:onClick="proBack"
+            android:text="Back"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/proEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/proEdit" />
+
+        <Button
+            android:id="@+id/proEdit"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="96dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="sans-serif-light"
+            android:text="Edit"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/proBack"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilePhoNum" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

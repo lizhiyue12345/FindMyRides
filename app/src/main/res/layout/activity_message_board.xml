@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageBoard">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        app:titleTextColor="@color/colorPrimaryDark"
+        android:background="@drawable/shape2"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:id="@+id/info_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="58dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar2">
+
+        <ImageView
+            android:id="@+id/tou"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/Mfrom"
+            android:layout_width="220dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/Mday"
+            android:layout_alignStart="@+id/Mday"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="From..."
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/Mtime"
+            android:layout_width="220dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/tou"
+            android:layout_alignStart="@+id/Mfrom"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/et_bg"
+            android:digits="0123456789:"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="HH:MM"
+            android:paddingLeft="15dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/Mday"
+            android:layout_width="220dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/Mtime"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/et_bg"
+            android:digits="0123456789/"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="MM/DD/YYYY"
+            android:paddingLeft="15dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/Mdes"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_below="@+id/Mfrom"
+            android:layout_alignStart='@+id/Mday'
+            android:layout_marginTop="32dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="To..."
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/POST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Mdes"
+            android:layout_alignStart="@+id/Mdes"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="sans-serif-light"
+            android:onClick="Post"
+            android:text="POST"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/BACK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Mdes"
+            android:layout_alignEnd="@+id/Mdes"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="sans-serif-light"
+            android:onClick="Back"
+            android:text="BACK"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="@+id/Mday"
+            app:layout_constraintTop_toBottomOf="@+id/Mday" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/MessageList"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:divider="@null"
+        android:dividerHeight="10.0sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar2"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@mipmap/post"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar2"
+        app:layout_constraintVertical_bias="0.983" />
+</android.support.constraint.ConstraintLayout>

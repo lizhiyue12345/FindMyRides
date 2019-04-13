@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "170848728950",
+    "firebase_url": "https://findmyrides-cs121.firebaseio.com",
+    "project_id": "findmyrides-cs121",
+    "storage_bucket": "findmyrides-cs121.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170848728950:android:0f4d87bf37cd9d99",
+        "android_client_info": {
+          "package_name": "com.example.findmyrides"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170848728950-i0tq4ipniudskkv8d3nitc3j61p7ku0l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.findmyrides",
+            "certificate_hash": "40ece88fa093869e48f610ea7262e852d0fa501a"
+          }
+        },
+        {
+          "client_id": "170848728950-qp63ffi9g04qplqrn3c8r7p1ksug4q1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMO1dPJiXSV9xqb_pmLxG83hOw8CcAqGE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170848728950-qp63ffi9g04qplqrn3c8r7p1ksug4q1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:fontFamily="sans-serif-light"
+    android:orientation="vertical"
+    android:textColor="@color/colorPrimaryDark"
+    android:weightSum="20">
+
+
+    <TextView
+        android:id="@+id/messageName"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/messageFrom"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/messageName"
+        android:layout_alignStart="@+id/messageName"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/messageDes"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/messageFrom"
+        android:layout_alignStart="@+id/messageFrom"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/messageDay"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/messageName"
+        android:layout_alignTop="@+id/messageName"
+        android:layout_marginStart="188dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/messageTime"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/messageDay"
+        android:layout_alignStart="@+id/messageDay"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/Acc"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/messageTime"
+        android:layout_alignStart="@+id/messageTime"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>
